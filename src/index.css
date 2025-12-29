@@ -46,17 +46,17 @@
   }
 
   .dark {
-    /* Dark Mode Color Palette */
-    --background: 235 21% 21%;        /* #2b2d42 - dark blue-black */
-    --foreground: 197 18% 94%;        /* #edf2f4 - near-white platinum */
-    --primary: 218 17% 62%;           /* #8d99ae - lavender grey */
+    /* Dark Mode Color Palette - Sunset Theme */
+    --background: 247 10% 17%;        /* #292831 - dark background */
+    --foreground: 197 18% 94%;        /* #edf2f4 - near-white platinum (kept for readability) */
+    --primary: 202 34% 44%;           /* #4a7a96 - lighter blue */
     --primary-foreground: 197 18% 94%; /* light text on primary */
-    --secondary: 353 85% 54%;         /* #ef233c - strawberry red */
-    --secondary-foreground: 197 18% 94%; /* light text on secondary */
-    --accent: 350 96% 43%;            /* #d90429 - vivid bright red */
-    --accent-foreground: 197 18% 94%; /* light text on accent */
-    --border: 235 21% 31%;            /* lighter version of background */
-    --card: 235 21% 25%;              /* slightly lighter than background */
+    --secondary: 11 90% 83%;             /* #fbbbad - calmer orange */
+    --secondary-foreground: 247 10% 17%; /* dark text on pink */
+    --accent: 351 77% 73%;         /* #ee8695 - nice pink */
+    --accent-foreground: 247 10% 17%; /* dark text on orange */
+    --border: 221 27% 37%;            /* lighter version of dark blue */
+    --card: 221 27% 27%;              /* #333f58 - dark blue for cards */
   }
 
   * {

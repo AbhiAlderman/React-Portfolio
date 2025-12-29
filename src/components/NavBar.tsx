@@ -11,6 +11,7 @@ const navItems = [
     {name: "LinkedIn", href: "https://www.linkedin.com/in/abhialderman/"},
     {name: "GitHub", href: "https://github.com/AbhiAlderman?tab=repositories"},
     {name: "Contact", href: "#contact"},
+    {name: "Palette", href: "/palette"},
 ]
 
 export const NavBar = () => {
@@ -36,8 +37,8 @@ export const NavBar = () => {
         <div className="container flex items-center justify-between">
             <a className="text-xl font-bold flex items-center hover:opacity-80 transition-opacity" href="#home">
                 <span className="relative z-10">
-                    <span className="text-foreground">Your Name</span>
-                    <span className="text-primary ml-2">Portfolio</span>
+                    <span className="text-foreground">Abhi</span>
+                    <span className="text-primary ml-2">Alderman</span>
                 </span>
             </a>
 

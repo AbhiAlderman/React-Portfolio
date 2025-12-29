@@ -1,5 +1,6 @@
 import { NavBar } from "../components/NavBar";
 import { ThemeToggle } from "../components/ThemeToggle";
+import { Hero } from "../components/Hero";
 
 export const Home = () => {
   return (
@@ -10,41 +11,22 @@ export const Home = () => {
       {/* Navbar */}
       <NavBar />
 
-      {/* Main Content */}
-      <main className="pt-24 px-4">
+      {/* Hero Section */}
+      <Hero />
+
+      {/* Projects Section - Coming next */}
+      <section id="projects" className="min-h-screen py-20 px-4">
         <div className="container">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
-            Welcome to My Portfolio
-          </h1>
-          <p className="text-xl text-foreground/70 mb-8">
-            This is a placeholder. We'll build the hero section and project grid next!
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Projects
+          </h2>
+          <p className="text-center text-foreground/70">
+            Project grid will go here...
           </p>
-
-          {/* Color palette demo */}
-          <div className="mt-12">
-            <h2 className="text-2xl font-bold mb-4">Color Palette Preview:</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div className="bg-background border border-border p-4 rounded-lg">
-                <div className="text-foreground font-medium">Background</div>
-              </div>
-              <div className="bg-primary p-4 rounded-lg">
-                <div className="text-primary-foreground font-medium">Primary</div>
-              </div>
-              <div className="bg-secondary p-4 rounded-lg">
-                <div className="text-secondary-foreground font-medium">Secondary</div>
-              </div>
-              <div className="bg-accent p-4 rounded-lg">
-                <div className="text-accent-foreground font-medium">Accent</div>
-              </div>
-              <div className="bg-card border border-border p-4 rounded-lg">
-                <div className="text-foreground font-medium">Card</div>
-              </div>
-            </div>
-          </div>
         </div>
-      </main>
+      </section>
 
-      {/* Footer */}
+      {/* Footer - Coming later */}
     </div>
   );
 };

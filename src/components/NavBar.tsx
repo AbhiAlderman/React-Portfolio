@@ -1,14 +1,15 @@
 import { cn } from "../lib/utils";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import resume_pdf from "../../public/AbhiAlderman_Resume.pdf"
 
 const navItems = [
     {name: "Home", href: "#home"},
     {name: "About", href: "#about"},
     {name: "Projects", href: "#projects"},
-    {name: "Resume", href: "/resume"},
-    {name: "LinkedIn", href: "https://www.linkedin.com/in/yourprofile"},
-    {name: "GitHub", href: "https://github.com/yourprofile"},
+    {name: "Resume", href: resume_pdf},
+    {name: "LinkedIn", href: "https://www.linkedin.com/in/abhialderman/"},
+    {name: "GitHub", href: "https://github.com/AbhiAlderman?tab=repositories"},
     {name: "Contact", href: "#contact"},
 ]
 
@@ -42,17 +43,20 @@ export const NavBar = () => {
 
             {/* desktop nav */}
             <div className="hidden md:flex items-center space-x-8">
-                {navItems.map((item, key) => (
-                    <a
-                        key={key}
-                        href={item.href}
-                        className="text-foreground/70 hover:text-primary font-medium transition-colors duration-300"
-                        target={item.href.startsWith('http') ? '_blank' : undefined}
-                        rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    >
-                        {item.name}
-                    </a>
-                ))}
+                {navItems.map((item, key) => {
+                    const isExternal = item.href.startsWith('http') || item.href.endsWith('.pdf');
+                    return (
+                        <a
+                            key={key}
+                            href={item.href}
+                            className="text-foreground/70 hover:text-primary font-medium transition-colors duration-300"
+                            target={isExternal ? '_blank' : undefined}
+                            rel={isExternal ? 'noopener noreferrer' : undefined}
+                        >
+                            {item.name}
+                        </a>
+                    );
+                })}
             </div>
 
             {/* mobile nav */}
@@ -71,18 +75,21 @@ export const NavBar = () => {
                 isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
             )}>
                 <div className="flex flex-col space-y-8 text-xl">
-                    {navItems.map((item, key) => (
-                        <a
-                            key={key}
-                            href={item.href}
-                            className="text-foreground/80 hover:text-primary font-medium transition-colors duration-300 text-center"
-                            onClick={() => setIsMenuOpen(false)}
-                            target={item.href.startsWith('http') ? '_blank' : undefined}
-                            rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        >
-                            {item.name}
-                        </a>
-                    ))}
+                    {navItems.map((item, key) => {
+                        const isExternal = item.href.startsWith('http') || item.href.endsWith('.pdf');
+                        return (
+                            <a
+                                key={key}
+                                href={item.href}
+                                className="text-foreground/80 hover:text-primary font-medium transition-colors duration-300 text-center"
+                                onClick={() => setIsMenuOpen(false)}
+                                target={isExternal ? '_blank' : undefined}
+                                rel={isExternal ? 'noopener noreferrer' : undefined}
+                            >
+                                {item.name}
+                            </a>
+                        );
+                    })}
                 </div>
             </div>
         </div>

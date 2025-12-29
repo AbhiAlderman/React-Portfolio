@@ -6,11 +6,11 @@ export const Hero = () => {
       <div className="container max-w-5xl mx-auto">
         <div className="flex flex-col items-center text-center">
           {/* Hero Image */}
-          <div className="mb-8 w-full max-w-md md:max-w-2xl animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <div className="mb-8 w-full max-w-md md:max-w-2xl animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl rounded-xl overflow-hidden">
             <img
               src={heroImage}
               alt="Abhi Alderman"
-              className="w-full h-auto rounded-xl shadow-2xl border-2 border-border"
+              className="w-full h-auto shadow-2xl border-2 border-border"
             />
           </div>
 

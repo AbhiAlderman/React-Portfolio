@@ -2,7 +2,7 @@ import type { Project } from '../types/project';
 
 // Import all project images
 import animatronicEyesImg from '../assets/Visuals/Animatronic-Eyes/eyesproto.gif';
-import benchmarkKukaImg from '../assets/Visuals/Benchmark-Kuka/robot3.gif';
+import benchmarkKukaImg from '../assets/Visuals/Benchmark-Kuka/toolpick.gif';
 import berkeleyArmImg from '../assets/Visuals/Berkeley-Arm/pick_and_place.gif';
 import bubbleBouncerImg from '../assets/Visuals/Bubble-Bouncer/demo.gif';
 import cloyneDoorImg from '../assets/Visuals/Cloyne-Door/doorVid.gif';

@@ -1,0 +1,91 @@
+---
+title: "Benchmark Electronics KUKA Robot Arm"
+date: "Summer 2021"
+tags: ["KUKA", "Automation", "Robotics"]
+---
+
+import { ProjectImage } from '../../components/mdx/ProjectImage';
+import { ProjectTLDR } from '../../components/mdx/ProjectTLDR';
+import { ProjectDivider } from '../../components/mdx/ProjectDivider';
+
+import heroImg from '../../assets/Visuals/Benchmark-Kuka/stock_image.jpg';
+import toolPickGif from '../../assets/Visuals/Benchmark-Kuka/toolpick.gif';
+import robot3Gif from '../../assets/Visuals/Benchmark-Kuka/robot3.gif';
+import robot2Gif from '../../assets/Visuals/Benchmark-Kuka/robot2.gif';
+import manualFlipGif from '../../assets/Visuals/Benchmark-Kuka/manual_flip.gif';
+import robot1Gif from '../../assets/Visuals/Benchmark-Kuka/robot1.gif';
+
+<ProjectImage src={heroImg} alt="KUKA Robot Arm" maxWidth="full" />
+
+<ProjectTLDR>
+KUKA Robotic Arm that autonomously switches tools, picks up brushes, deburrs product surfaces and holes, and picks / racks products.
+</ProjectTLDR>
+
+<ProjectDivider />
+
+## Summary
+
+At Benchmark Electronics I programmed and operated a KUKA Robotic Arm. I programmed the Robot arm to autonomously pick up tools, pick up and flip products, deburr holes, polish surfaces and brush edges. The potters wheel was equiped with an encoder and used to autonomously spin the different parts around. I used this to align holes to be deburred and to sping the product in the opposite direction as the arm, allowing for a smoother finish when polishing. This was all done in the KUKA programming language, where I utilized basic data structures and different loops to complete repetitive routines.
+
+<ProjectDivider />
+
+## Full Process
+
+I started this project by observing how the parts were currently being manually deburred. This process was especially strenious and tedious for the workers. The gas gasket itself was not complicated to deburr fully, but took lots of repetition and continual force from the workers that was hurting their health, which started this automation project.
+
+## Picking a tool from the rack
+
+The arm needed to use a variety of diffferent tools to fully deburr the gas gasket. Different materials, shapes, and hardness were required to get the correct finish. To easily have the robot automatically replace its tools, we built a tool rack that the arm could simply pick and place the different tool bits from.
+
+<ProjectImage
+  src={toolPickGif}
+  alt="Robot picking tool from rack"
+  caption="Picking a tool from the rack"
+  maxWidth="medium"
+/>
+
+## Deburring the top of the gasket
+
+The first step in the deburring process was to place the gasket on the rotating table and fully deburr the top side. This includes the surfaces, ridges, and holes, which required many different tools to be swapped between in order to fit the different requirements. Here are just some of the steps.
+
+### Precisely deburring the holes
+
+<ProjectImage
+  src={robot3Gif}
+  alt="Robot deburring holes"
+  caption="Top hole deburring"
+  maxWidth="medium"
+/>
+
+<ProjectImage
+  src={robot2Gif}
+  alt="Robot deburring top surface"
+  caption="Deburring the large top surface of the gasket"
+  maxWidth="medium"
+/>
+
+## Manually flipping the heavy gasket
+
+The next step was to manually flip the gasket over, so that the bottom could be deburred. Initially, we wanted the arm to flip the gasket over itself, to make this entire process autonomous. However, this proved to be too difficult and too dangerous, as the gas gasket was far too heavy and difficult to hold for the robot arm to be able to safely lift and rotate it fully. With our tight deadline we decided to just manually flip the gasket over after the top was full deburred.
+
+<ProjectImage
+  src={manualFlipGif}
+  alt="Manual gasket flip"
+  caption="Manually flipping the heavy gasket"
+  maxWidth="medium"
+/>
+
+## Deburring the bottom of the gasket
+
+The last step is simply to fully deburr the bottom of the gasket. This does not require as many steps, as most of the holes are on the top of the gasket. All that is required here is deburring the different indents, which can all be done with the same tool.
+
+<ProjectImage
+  src={robot1Gif}
+  alt="Robot deburring bottom surface"
+  caption="Deburring the smaller indent on the bottom of the basket"
+  maxWidth="medium"
+/>
+
+## Completion
+
+This covers all the required steps to completely deburr a gas gasket. This proved to be very useful in the long run, and we were able to get many gaskets ran through this single arm during my time at Benchmark. The robot arm also proved to be useful in deburring and finishing other parts as well. Overall, I was very pleased with the outcome of this project. This was my first experience with Robotics in a professional setting, and it was a great learning experience for how robotics is used in the industry.

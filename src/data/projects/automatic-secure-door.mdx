@@ -1,0 +1,56 @@
+---
+title: "Automatic Secure Door"
+date: "2022"
+tags: ["Arduino", "Automation"]
+---
+
+import { ProjectImage } from '../../components/mdx/ProjectImage';
+import { ProjectLinks } from '../../components/mdx/ProjectLinks';
+import { ProjectTLDR } from '../../components/mdx/ProjectTLDR';
+import { ProjectDivider } from '../../components/mdx/ProjectDivider';
+
+import heroImg from '../../assets/Visuals/Cloyne-Door/doorVid.gif';
+import doorCircuit from '../../assets/Visuals/Cloyne-Door/doorCircuit.jpg';
+import doorOpener from '../../assets/Visuals/Cloyne-Door/doorOpener.jpg';
+
+<ProjectImage src={heroImg} alt="Automated door opening" maxWidth="full" />
+
+<ProjectLinks
+  github="https://github.com/AbhiAlderman/RFID_Access_Controller"
+/>
+
+<ProjectTLDR>
+Automated Door that could be opened using a Berkeley student ID card for verified members living at Cloyne Court.
+</ProjectTLDR>
+
+<ProjectDivider />
+
+## Overview
+
+As Network Manager, I automated the front door at Cloyne Court, the Berkeley Student Co-Op I lived at. The end program for this is pretty simple and runs on arduino, but debugging this was a very difficult challenge for myself and Benedict (My co-manager). It took us a while to learn how the returned Hexadecimal data from the RFID scanner corellated to the student ID of the card that was scanned. Figuring that out made the rest easy. To open this door, you must be a UC Berkeley student with an ID card, and you must be verified as living at cloyne court. The verification process was simple sending part of the digits on the back of the ID through a google form, where the Network Manager can see it and add it to the verified list of IDs.
+
+<ProjectDivider />
+
+## UNDER CONSTRUCTION
+
+I am still working on this page. Sorry! Check the links for more info. Feel free to message me at abhialderman@gmail.com if you have any urgent questions.
+
+<ProjectDivider />
+
+## Arduino electronic setup
+
+<ProjectImage
+  src={doorCircuit}
+  alt="Door circuit board setup"
+  caption="Arduino electronic setup"
+  maxWidth="medium"
+/>
+
+## Door opener
+
+<ProjectImage
+  src={doorOpener}
+  alt="Door opener mechanism"
+  caption="Door opener mechanism"
+  maxWidth="medium"
+/>

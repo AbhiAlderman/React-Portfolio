@@ -58,7 +58,7 @@ export const projects: Project[] = [
   {
     id: 'personal-portfolio',
     title: 'Personal Portfolio',
-    description: 'Online Portfolio to view my past projects and experience.',
+    description: 'Online Portfolio to view my past projects and experience. I\'ve made quite a few!',
     image: portfolioImg,
     tags: ['Javascript', 'HTML', 'CSS', 'React', 'Astro'],
     githubUrl: 'https://github.com/AbhiAlderman/Portfolio',

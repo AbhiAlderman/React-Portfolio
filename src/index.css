@@ -111,6 +111,30 @@
          transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95;
 }
 
+@utility prose-custom {
+  @apply text-base leading-relaxed;
+
+  & > * {
+    @apply mx-auto;
+  }
+
+  & p, & ul, & ol, & blockquote {
+    @apply max-w-[700px];
+  }
+
+  & h1, & h2, & h3 {
+    @apply max-w-[700px];
+  }
+
+  & img, & figure {
+    @apply max-w-[900px];
+  }
+
+  & pre {
+    @apply max-w-[900px];
+  }
+}
+
 #root {
   max-width: 100%;
   margin: 0 auto;

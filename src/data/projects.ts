@@ -6,7 +6,7 @@ import benchmarkKukaImg from '../assets/Visuals/Benchmark-Kuka/toolpick.gif';
 import berkeleyArmImg from '../assets/Visuals/Berkeley-Arm/pick_and_place.gif';
 import bubbleBouncerImg from '../assets/Visuals/Bubble-Bouncer/demo.gif';
 import cloyneDoorImg from '../assets/Visuals/Cloyne-Door/doorVid.gif';
-import discordBotImg from '../assets/Visuals/Discord-Chatbot/discordDemo.jpg';
+import discordBotImg from '../assets/Visuals/Discord-Chatbot/discordDemo.png';
 import frcImg from '../assets/Visuals/FRC/2020/robotHoops.gif';
 import lightsCameraDungeonImg from '../assets/Visuals/Lights-Camera-Dungeon/damaged.gif';
 import portfolioImg from '../assets/Visuals/Portfolio/frontpage.png';

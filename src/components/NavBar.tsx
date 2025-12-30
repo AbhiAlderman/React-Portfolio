@@ -11,8 +11,6 @@ const navItems = [
     {name: "Resume", href: resume_pdf},
     {name: "LinkedIn", href: "https://www.linkedin.com/in/abhialderman/"},
     {name: "GitHub", href: "https://github.com/AbhiAlderman?tab=repositories"},
-    {name: "Contact", href: "#contact", homeHref: "/#contact"},
-    {name: "Palette", href: "/palette"},
 ]
 
 export const NavBar = () => {

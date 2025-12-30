@@ -1,14 +1,19 @@
+import { NavBar } from "../components/NavBar";
 import { ThemeToggle } from "../components/ThemeToggle";
 
 export const Palette = () => {
   return (
     <div className="min-h-screen bg-background">
-        <ThemeToggle />
-        <section className="py-12 px-4">
+        <NavBar />
+        <section className="py-24 px-4">
             <div className="container max-w-4xl">
+            <h1 className="text-3xl font-bold mb-2 text-center text-foreground">Hey! You're not supposed to be here!</h1>
+            <p className="text-center text-foreground/70 mb-8">This is my super secret page I use to test out color palettes. Congrats, you found the secret! Now go back and <a href="/#projects" className="text-primary hover:underline">look at my projects</a>!</p>
             <h2 className="text-3xl font-bold mb-2 text-center text-foreground">Color Palette Preview</h2>
             <p className="text-center text-foreground/70 mb-8">Background colors with their corresponding text (foreground) colors</p>
-
+            <div className="flex justify-center mb-8">
+            <ThemeToggle />
+            </div>
             {/* Background + Foreground Pairings */}
             <div className="mb-12">
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Background & Text Color Pairings</h3>

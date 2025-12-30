@@ -11,6 +11,7 @@ import frcImg from '../assets/Visuals/FRC/2020/robotHoops.gif';
 import lightsCameraDungeonImg from '../assets/Visuals/Lights-Camera-Dungeon/damaged.gif';
 import portfolioImg from '../assets/Visuals/Portfolio/frontpage.png';
 import platmorferImg from '../assets/Visuals/Platmorfer/title_gif.gif';
+import powerLeapImg from '../assets/Visuals/Power-Leap/thumbnail_small.png';
 import ribbonRobotImg from '../assets/Visuals/Ribbon-Robot/Ribbon-Robot.gif';
 
 export const projects: Project[] = [
@@ -27,7 +28,7 @@ export const projects: Project[] = [
     title: 'Platmorfer',
     description: 'Game I made in 2 weeks for a game jam. Difficult Platformer with power-up mechanics.',
     image: platmorferImg,
-    tags: ['Godot', 'GameDev', 'Game Jam'],
+    tags: ['GameDev', 'Godot', 'GDScript', 'Game Jam'],
     githubUrl: 'https://github.com/AbhiAlderman/Platformer-Board-Game',
     demoUrl: 'https://toastyfraud.itch.io/platmorfer',
   },
@@ -44,7 +45,7 @@ export const projects: Project[] = [
     title: 'Bubble Bouncer',
     description: 'Game I made in 3 days for a game jam. Bounce on bubbles while avoiding obstacles to get a high score.',
     image: bubbleBouncerImg,
-    tags: ['Godot', 'GameDev', 'Game Jam'],
+    tags: ['GameDev', 'Godot', 'GDScript', 'Game Jam'],
     githubUrl: 'https://github.com/AbhiAlderman/Bubble-Arcade-Game',
     demoUrl: 'https://toastyfraud.itch.io/bubble-bouncer',
   },
@@ -56,11 +57,20 @@ export const projects: Project[] = [
     tags: ['KUKA', 'Automation', 'Robotics'],
   },
   {
+    id: 'power-leap',
+    title: 'Power Leap',
+    description: 'Game Jam submission for the Kenny Game Jam. Leap to the top!',
+    image: powerLeapImg,
+    tags: ['GameDev', 'Godot', 'GDScript', 'Game Jam'],
+    githubUrl: 'https://github.com/dangjase/kenney-jam-2025',
+    demoUrl: 'https://toastyfraud.itch.io/power-leap',
+  },
+  {
     id: 'lights-camera-dungeon',
     title: 'Lights, Camera, Dungeon!',
     description: 'Game I made with 3 other students for the Computer Graphics class at UC Berkeley. Top down roguelike with power ups, enemies, and a final boss',
     image: lightsCameraDungeonImg,
-    tags: ['Graphics', 'Godot', 'GameDev'],
+    tags: ['Graphics', 'Godot', 'GameDev', 'GDScript'],
     githubUrl: 'https://github.com/draynr/Lights_Camera_Dungeon',
     demoUrl: 'https://toastyfraud.itch.io/lights-camera-dungeon',
   },

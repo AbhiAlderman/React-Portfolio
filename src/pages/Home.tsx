@@ -18,7 +18,7 @@ export const Home = () => {
             Projects
           </h2>
           <p className="text-center text-foreground/70 mb-12 max-w-2xl mx-auto">
-            Here are some of my recent projects showcasing my skills in software development and technology.
+            Here are some of my professional, academic, and personal projects.
           </p>
           <ProjectGrid />
         </div>

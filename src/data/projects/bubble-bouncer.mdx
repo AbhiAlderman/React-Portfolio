@@ -1,6 +1,6 @@
 ---
 title: "Bubble Bouncer"
-date: "2024"
+date: "June 21-24, 2024"
 tags: ["Godot", "GameDev", "Game Jam"]
 ---
 
@@ -10,9 +10,10 @@ import { ProjectTLDR } from '../../components/mdx/ProjectTLDR';
 import { ProjectDivider } from '../../components/mdx/ProjectDivider';
 
 import heroImg from '../../assets/Visuals/Bubble-Bouncer/demo.gif';
-import img1 from '../../assets/Visuals/Bubble-Bouncer/image.png';
-import img2 from '../../assets/Visuals/Bubble-Bouncer/image (1).png';
-import img3 from '../../assets/Visuals/Bubble-Bouncer/image (2).png';
+import prototype1 from '../../assets/Visuals/Bubble-Bouncer/prototype_1.gif';
+import prototype2 from '../../assets/Visuals/Bubble-Bouncer/prototype_2.gif';
+import downwellDemo from '../../assets/Visuals/Bubble-Bouncer/downwell_demo.gif';
+import demo2 from '../../assets/Visuals/Bubble-Bouncer/demo_2.gif';
 import thumbnail from '../../assets/Visuals/Bubble-Bouncer/thumbnail.png';
 
 <ProjectImage src={heroImg} alt="Bubble Bouncer gameplay demo" maxWidth="full" />
@@ -23,7 +24,7 @@ import thumbnail from '../../assets/Visuals/Bubble-Bouncer/thumbnail.png';
 />
 
 <ProjectTLDR>
-Game I made in 3 days for a game jam. Bounce on bubbles while avoiding obstacles to get a high score.
+Game I made in 3 days for a game jam. Bounce on bubbles while avoiding obstacles to get a high score!
 </ProjectTLDR>
 
 <ProjectDivider />
@@ -34,20 +35,65 @@ Simple game jam game I made in godot in 3 days. My first solo attempt at a video
 
 <ProjectDivider />
 
-## UNDER CONSTRUCTION
+## Prototyping
 
-I am still working on this page. Sorry! Check the links for more info. Feel free to message me at abhialderman@gmail.com if you have any urgent questions.
+From June 21st 2024 - June 24th 2024, I participated in the [ScoreSpace Jam #30](https://itch.io/jam/scorejam30). The theme was FLOAT. I originally entered this game jam with a friend of mine, and we got started prototyping right away. Since we were both new to game development, we decided to keep it simple and stick to a 2D platformer. Our original prototype featured a "float" mechanic to stick to the theme, where the character could hover in the air.
 
-<ProjectDivider />
+<ProjectImage
+  src={prototype1}
+  alt="Early prototype with float mechanic"
+  caption="Player is able to hold space to slow their descent and 'hover'."
+  maxWidth="medium"
+/>
 
-## Temporary Visuals
+We even had the bright idea to add throwable "spear" projectiles for some future combat. These spears could stick to walls, and the player could actually then **jump on** these spears to climb up walls.
 
-Description to come later.
+<ProjectImage
+  src={prototype2}
+  alt="Prototype with spear mechanics"
+  caption="Player is able to throw spears. Spears can stick into walls and be used as platforms."
+  maxWidth="medium"
+/>
 
-<ProjectImage src={img1} alt="Bubble Bouncer screenshot" maxWidth="medium" />
+All things considered, this honestly was not a terrible idea. We at least had some basic mechanics. But… it just WAS NOT FUN!!! What was the point? What was the objective? Do we need to add enemies? Do we have time to make an engaging enemy AI?
 
-<ProjectImage src={img2} alt="Bubble Bouncer screenshot" maxWidth="medium" />
+## Where do good ideas come from?
 
-<ProjectImage src={img3} alt="Bubble Bouncer screenshot" maxWidth="medium" />
+It really seemed like too much. I thought we had kept our scope to a minimum, but we still managed to run into scope creep. At this point, I was about ready to throw in the towel. It was 1:00 AM, I was tired and disenchanted with our idea, and I wanted to go to sleep. So I went to the bathroom to wash up and get ready for bed.
 
-<ProjectImage src={thumbnail} alt="Bubble Bouncer thumbnail" maxWidth="medium" />
+You know how they say the best ideas come on the toilet? Well, this was one of my most notorious toilet idea moments. There was another game I came across in the App store called [Downwell](https://downwellgame.com/).
+
+<ProjectImage
+  src={downwellDemo}
+  alt="Downwell gameplay"
+  caption="Gameplay from the game Downwell. Very addicting!"
+  maxWidth="medium"
+/>
+
+This game really inspired me. I loved the idea of a platform in a confined space, revolving on bouncing on enemies and staying in the air to "combo" as long as you can. So I thought, what if we just scrapped EVERYTHING we had and went for something like this instead? So that's what I did for the next few hours, until I passed out around 5:00 AM.
+
+## Final Product
+
+<ProjectImage
+  src={demo2}
+  alt="Bubble Bouncer final gameplay"
+  caption="Gameplay from my game Bubble Bouncer. Bounce on, bounce man!"
+  maxWidth="medium"
+/>
+
+It certainly wasn't an easy task with my skill set at the time. This project taught me a lot about the fundamentals of game development. Everyone likes to focus on the gameplay, but what about the music, sound, UI, and game design? How do you quickly get someone up to speed on your controls? Is this sound too loud? Does this art style match the rest of my assets? Is this song copyrighted, or can I use it? Indie development can be absolutely tedious, but the end result makes it all worth it. I actually had a lot of fun playing my own game, which was the most important criteria for myself.
+
+One unfortunate aspect was the collaboration on this project. I basically abandoned our old idea, and as a result my project partner and I decided to work on different projects. Which is totally fine! He basically woke up in the morning to see an entirely new game after my fever induced work sprint. I'm sure that was very jarring. If you're reading this, sorry dude! However, I did get help from a couple other friends on some of the artwork. The main character was designed by me, but some of my friends helped with the assets for the level, bubbles, and obstacles! Thanks guys!
+
+## Conclusion
+
+<ProjectImage
+  src={thumbnail}
+  alt="Bubble Bouncer thumbnail"
+  caption="Thumbnail used on itch.io"
+  maxWidth="medium"
+/>
+
+I actually ended up winning an award in this jam! It's not an exact ranking, but I won the award for "ScoreSpace Choice", which basically means the organizers of this game jam liked my submission the best! In terms of overall rankings, I placed 15th out of 125 submissions. Other awards included Overall, Developer's Choice, Streamer's Choice, Gameplay, Theme, Aesthetics, and Sound. I was just ecstatic that so many people ended up liking my game!
+
+If you made it this far, thanks for reading! I wanted to make a quick write up to remember the process of my first solo game development experience. I'm hoping there will be many more to come! And of course, check out the [game and play it for yourself](https://toastyfraud.itch.io/bubble-bouncer)!

@@ -56,14 +56,6 @@ export const projects: Project[] = [
     tags: ['KUKA', 'Automation', 'Robotics'],
   },
   {
-    id: 'personal-portfolio',
-    title: 'Personal Portfolio',
-    description: 'Online Portfolio to view my past projects and experience. I\'ve made quite a few!',
-    image: portfolioImg,
-    tags: ['Javascript', 'HTML', 'CSS', 'React', 'Astro'],
-    githubUrl: 'https://github.com/AbhiAlderman/Portfolio',
-  },
-  {
     id: 'lights-camera-dungeon',
     title: 'Lights, Camera, Dungeon!',
     description: 'Game I made with 3 other students for the Computer Graphics class at UC Berkeley. Top down roguelike with power ups, enemies, and a final boss',
@@ -71,6 +63,14 @@ export const projects: Project[] = [
     tags: ['Graphics', 'Godot', 'GameDev'],
     githubUrl: 'https://github.com/draynr/Lights_Camera_Dungeon',
     demoUrl: 'https://toastyfraud.itch.io/lights-camera-dungeon',
+  },
+  {
+    id: 'personal-portfolio',
+    title: 'Personal Portfolio',
+    description: 'Online Portfolio to view my past projects and experience. I\'ve made quite a few!',
+    image: portfolioImg,
+    tags: ['Javascript', 'HTML', 'CSS', 'React', 'Astro'],
+    githubUrl: 'https://github.com/AbhiAlderman/Portfolio',
   },
   {
     id: 'automatic-secure-door',

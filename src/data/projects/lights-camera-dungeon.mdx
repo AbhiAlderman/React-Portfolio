@@ -2,7 +2,7 @@
 title: "Lights, Camera, Dungeon!"
 date: "Spring 2024"
 institution: "UC Berkeley"
-tags: ["ESP32", "KiCAD", "TinkerCAD", "Robotics"]
+tags: ["Godot", "GameDev", "Computer Graphics"]
 ---
 
 import { ProjectImage } from '../../components/mdx/ProjectImage';
@@ -37,49 +37,13 @@ Game I made with 3 other students for the Computer Graphics class at UC Berkeley
 
 <ProjectDivider />
 
-## VIDEO DEMO AT END OF PAGE
-
-<ProjectDivider />
-
 ## Overview
 
-Final project for my computer graphics class at UC Berkeley. The [Class Project Webpage](https://junolee128.github.io/CS184FinalWebpage/) contains comprehensive info for this entire project. I will update this page with visuals in the future, for now please check out the Webpage to see the technical details. If you want to play the game, check out the itch.io page. Note that this game is a bit performance intensive, so it will not run well on browser and must be downloaded.
+Final project for my computer graphics class at UC Berkeley. View the [Class Project Webpage](https://junolee128.github.io/CS184FinalWebpage/#abstract) for a more in depth technical write up. If you want to play this game, check out the [itch.io](https://toastyfraud.itch.io/lights-camera-dungeon) page. Note that this game is pretty graphics intensive, so you cannot play it in the browser and must download it to your computer. Even then, depending on your specs, it still might stutter!
 
 <ProjectDivider />
 
-## UNDER CONSTRUCTION
-
-<ProjectDivider />
-
-## Visuals
-
-Description to come later.
-
-<ProjectImage src={bossImg} alt="Boss character" maxWidth="medium" />
-
-<ProjectImage src={bossfightGif} alt="Boss fight gameplay" maxWidth="medium" />
-
-<ProjectImage src={damagedGif} alt="Character taking damage" maxWidth="medium" />
-
-<ProjectImage src={enemyAI1} alt="Enemy AI visualization" maxWidth="medium" />
-
-<ProjectImage src={enemyAI2} alt="Enemy AI visualization" maxWidth="medium" />
-
-<ProjectImage src={gameplayImg} alt="Gameplay screenshot" maxWidth="medium" />
-
-<ProjectImage src={lenses1} alt="Camera lenses demonstration" maxWidth="medium" />
-
-<ProjectImage src={lenses2} alt="Camera lenses demonstration" maxWidth="medium" />
-
-<ProjectImage src={projectileShader} alt="Projectile shader" maxWidth="medium" />
-
-<ProjectImage src={raycastImg} alt="Raycasting visualization" maxWidth="medium" />
-
-<ProjectImage src={teapotRainbow} alt="Rainbow teapot" maxWidth="medium" />
-
-<ProjectDivider />
-
-## Video Demonstrations
+## Video Demos
 
 <ProjectVideo
   src="https://www.youtube.com/embed/8s-e0_YF_2k"
@@ -94,3 +58,63 @@ Description to come later.
   caption="Demonstration of game start to finish"
   maxWidth="medium"
 />
+
+<ProjectDivider />
+
+## Introduction
+
+### CS184
+
+CS184 is a computer graphics class at Berkeley. This class covers how computers render images to the screen, add texture to 3D models, use shaders, etc. Our final project was VERY open ended, basically letting us do whatever we wanted as long as it had ***something*** to do with computer graphics. So of course, my friends and I took this opportunity to create a game.
+
+<ProjectImage src={damagedGif} alt="Player getting damaged by a projectile" caption="Player getting damaged by a projectile" maxWidth="medium" />
+
+We decided we wanted to make a top-down roguelike. This is a very popular genre of game, and for good reason. The key features of these include randomized levels, hard difficulty, no check points, collecting randomized items, and fighting randomized enemies. There's a lot of random-ness here to keep things unique, but... we did not do that. Adding this randomness just made it too difficult to meet our other requirements for this project! Just a basic game wouldn't be enough for a computer graphics class, so to supplement this, we went ***HEAVY*** with the shaders. We also added special lens mechanic, more on that later.
+
+<ProjectDivider />
+
+## Shaders
+
+Shaders were a very important topic covered in the class, so what better way to get some credit? We decided we would go ham on the shaders for the projectiles and the boss. Here's what that looks like:
+
+<ProjectImage src={projectileShader} alt="Projectile with an applied shader" caption="Projectile with an applied shader" maxWidth="medium" />
+
+<ProjectImage src={teapotRainbow} alt="Rainbow teapot boss with shaders" caption='This 3D teapot was our "boss". We threw a bunch of different shaders on it for some variety.' maxWidth="medium" />
+
+This is actually why the game's performance is so bad. The shaders are just too much. They aren't optimized very well, there are way too many of them, and each one is absolutely overkill. Still, when you play this game on a device with enough power, it actually looks pretty cool. It's got a real neon look to it. But things got a little too crazy in the boss fight...
+
+<ProjectImage src={bossImg} alt="Bossfight with the Teapot boss" caption="Bossfight with the Teapot boss. The shaders are so bright!!!" maxWidth="medium" />
+
+<ProjectDivider />
+
+## Mechanics
+
+### Enemy AI
+
+A roguelike just wouldn't be complete without enemy AI. We added some simple enemies that shoot varying amounts of projectiles. Do your best to dodge them!
+
+<ProjectImage src={enemyAI1} alt="Enemy raycast visualization" caption="How the enemy find the player using a raycast." maxWidth="medium" />
+
+<ProjectImage src={enemyAI2} alt="Enemies raycasting in-game" caption="Enemies raycasting to find the player in-game." maxWidth="medium" />
+
+<ProjectImage src={gameplayImg} alt="Gameplay with many projectiles" caption="Enemies shooting many projectiles at the player. That's a lot of projectiles!" maxWidth="medium" />
+
+### Placeable lens
+
+To get some more credit, we wanted to incorporate a lens. There was a large portion of the class dedicated to lenses and how they change the viewport. This makes a big difference on imaging for cameras, and therefore for computers as well. To incorporate this as a mechanic, we added placeable lense. Shooting projectiles through this lens refracts them at an angle, using a formula we derived in class! These refracted projectiles deal more damage to enemies, so it's in your best interest to try and use this!
+
+<ProjectImage src={lenses2} alt="Lens refraction formula" caption="Formula for calculating the angle of the projectile after passing through the lens." maxWidth="medium" />
+
+<ProjectImage src={lenses1} alt="Lens in-game refracting projectile" caption="Placed lens in-game refracting a projectile shot by the player." maxWidth="medium" />
+
+### Boss fight
+
+As already mentioned above, the level ends with a boss fight with a 3D teapot. This teapot was the main boss, because a previous project featured us applying shaders to a 3D teapot model, and it was a pain in the ass! So we wanted to get some revenge on that model. This boss fight is actually pretty hard. We didn't do a good job balancing here, we just made a bunch of projectile launching patterns for the teapot to rotate between. But it's possible to win!
+
+<ProjectImage src={bossfightGif} alt="Bossfight gameplay" caption="Bossfight with the Teapot boss. Looks pretty hard!" maxWidth="medium" />
+
+<ProjectDivider />
+
+## Conclusion
+
+This project was a blast! I got to work with 2 close friends, and our final project was something that I can be proud to show off. It looks pretty cool! Gameplay-wise, however, there is a lot left to be desired. It's just too hard and not random enough! There's items, but they are preset at predetermined locations! Still, as an introduction into the world of GameDev and Godot for myself, I couldn't ask for anything better.

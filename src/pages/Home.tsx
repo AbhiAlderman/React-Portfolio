@@ -12,7 +12,7 @@ export const Home = () => {
       <Hero />
 
       {/* Projects Section */}
-      <section id="projects" className="min-h-screen py-20 px-4">
+      <section id="projects" className="min-h-[80vh] py-20 px-4">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Projects

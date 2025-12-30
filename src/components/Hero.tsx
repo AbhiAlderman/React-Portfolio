@@ -2,11 +2,11 @@ import heroImage from '../assets/hero-image.jpg';
 
 export const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 py-20">
+    <section id="home" className="min-h-[85vh] flex items-center justify-center px-4 py-20">
       <div className="container max-w-5xl mx-auto">
         <div className="flex flex-col items-center text-center">
           {/* Hero Image */}
-          <div className="mb-8 w-full max-w-md md:max-w-2xl animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl rounded-xl overflow-hidden">
+          <div className="mb-8 w-full max-w-md md:max-w-2xl animate-scale-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl rounded-xl overflow-hidden">
             <img
               src={heroImage}
               alt="Abhi Alderman"

@@ -1,20 +1,23 @@
 import { cn } from "../lib/utils";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "../components/ThemeToggle";
 import resume_pdf from "../../public/AbhiAlderman_Resume.pdf"
 
 const navItems = [
-    {name: "Home", href: "#home"},
-    {name: "About", href: "#about"},
-    {name: "Projects", href: "#projects"},
+    {name: "Home", href: "#home", homeHref: "/"},
+    {name: "Projects", href: "#projects", homeHref: "/#projects"},
     {name: "Resume", href: resume_pdf},
     {name: "LinkedIn", href: "https://www.linkedin.com/in/abhialderman/"},
     {name: "GitHub", href: "https://github.com/AbhiAlderman?tab=repositories"},
-    {name: "Contact", href: "#contact"},
+    {name: "Contact", href: "#contact", homeHref: "/#contact"},
     {name: "Palette", href: "/palette"},
 ]
 
 export const NavBar = () => {
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -35,7 +38,7 @@ export const NavBar = () => {
         )}
     >
         <div className="container flex items-center justify-between">
-            <a className="text-xl font-bold flex items-center hover:opacity-80 transition-opacity" href="#home">
+            <a className="text-xl font-bold flex items-center hover:opacity-80 transition-opacity" href={isHomePage ? "#home" : "/"}>
                 <span className="relative z-10">
                     <span className="text-foreground">Abhi</span>
                     <span className="text-primary ml-2">Alderman</span>
@@ -46,11 +49,12 @@ export const NavBar = () => {
             <div className="hidden md:flex items-center space-x-8">
                 {navItems.map((item, key) => {
                     const isExternal = item.href.startsWith('http') || item.href.endsWith('.pdf');
+                    const finalHref = isHomePage ? item.href : (item.homeHref || item.href);
                     return (
                         <a
                             key={key}
-                            href={item.href}
-                            className="text-foreground/70 hover:text-primary font-medium transition-colors duration-300"
+                            href={finalHref}
+                            className="text-foreground/70 hover:text-accent font-medium transition-colors duration-300"
                             target={isExternal ? '_blank' : undefined}
                             rel={isExternal ? 'noopener noreferrer' : undefined}
                         >
@@ -58,6 +62,9 @@ export const NavBar = () => {
                         </a>
                     );
                 })}
+                
+                {/* Theme Toggle */}
+                <ThemeToggle />
             </div>
 
             {/* mobile nav */}
@@ -78,11 +85,12 @@ export const NavBar = () => {
                 <div className="flex flex-col space-y-8 text-xl">
                     {navItems.map((item, key) => {
                         const isExternal = item.href.startsWith('http') || item.href.endsWith('.pdf');
+                        const finalHref = isHomePage ? item.href : (item.homeHref || item.href);
                         return (
                             <a
                                 key={key}
-                                href={item.href}
-                                className="text-foreground/80 hover:text-primary font-medium transition-colors duration-300 text-center"
+                                href={finalHref}
+                                className="text-foreground/80 hover:text-accent font-medium transition-colors duration-300 text-center"
                                 onClick={() => setIsMenuOpen(false)}
                                 target={isExternal ? '_blank' : undefined}
                                 rel={isExternal ? 'noopener noreferrer' : undefined}
@@ -91,6 +99,10 @@ export const NavBar = () => {
                             </a>
                         );
                     })}
+                    {/* Theme Toggle */}
+                    <div className="flex justify-center">
+                        <ThemeToggle />
+                    </div>
                 </div>
             </div>
         </div>

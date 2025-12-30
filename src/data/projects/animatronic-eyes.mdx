@@ -1,0 +1,64 @@
+---
+title: "Animatronic Eyes with Face Tracking"
+date: "Spring 2022"
+institution: "UC Berkeley"
+tags: ["ESP32", "KiCAD", "TinkerCAD", "Robotics"]
+---
+
+import { ProjectImage } from '../../components/mdx/ProjectImage';
+import { ProjectLinks } from '../../components/mdx/ProjectLinks';
+import { ProjectTLDR } from '../../components/mdx/ProjectTLDR';
+import { ProjectDivider } from '../../components/mdx/ProjectDivider';
+import heroImg from '../../assets/Visuals/Animatronic-Eyes/eyesproto.gif';
+
+<ProjectImage src={heroImg} alt="Eyes tracking a face in real-time" maxWidth="full" />
+
+<ProjectLinks
+  github="https://github.com/AbhiAlderman/Animatronic-Eyes"
+  slides="https://docs.google.com/presentation/d/1FW59XkIs3ZGVX3t927tC5mJX9hl6XicPWnYyxPDcV-w/edit"
+/>
+
+<ProjectTLDR>
+3D printed eyes that detect and follow faces using an ESP32 microcontroller equipped with a camera and a live webserver. The system runs entirely on-device with real-time face tracking capabilities.
+</ProjectTLDR>
+
+<ProjectDivider />
+
+## Overview
+
+This project combines robotics, embedded systems, and computer vision to create lifelike animatronic eyes. I've always been fascinated by animatronics in theme parks and movies, and this was my opportunity to build something similar from scratch.
+
+The eyes use an ESP32-CAM module to detect faces in real-time and smoothly track movement using two servo motors. Everything runs on the microcontroller itself—no external computer required. I also built a web interface to monitor the camera feed and debug the system.
+
+## Technical Architecture
+
+The system consists of three main components:
+
+1. **Vision Pipeline**: ESP32-CAM module runs face detection using a lightweight computer vision algorithm
+2. **Servo Control**: Custom PCB routes signals to two servos controlling horizontal and vertical eye movement
+3. **Web Interface**: Real-time video feed and debug controls accessible via WiFi
+
+The biggest challenge was optimizing the face detection to run at a reasonable framerate on the ESP32's limited 240MHz processor. I experimented with different algorithms and eventually settled on a simplified Haar cascade detector that could achieve ~10fps.
+
+## Mechanical Design
+
+I designed the eye mechanism in TinkerCAD, 3D printing the eyeball housing and servo mounts. The design allows for smooth, realistic movement with minimal backlash. Each eye has two degrees of freedom controlled by hobby servos.
+
+## Results
+
+The final prototype successfully tracks faces within a 120-degree field of view with acceptable latency. The web interface makes it easy to calibrate servo positions and monitor system performance.
+
+<ProjectDivider />
+
+## Future Improvements
+
+There are several enhancements I'd like to make:
+
+- Adding eyelid servos for blinking animations
+- Implementing gaze prediction to anticipate movement
+- Battery-powered operation for portability
+- Multiple eye pairs synchronized together
+
+## Acknowledgements
+
+Special thanks to the ESP32 community forums for debugging help and the HOPE class at UC Berkeley for providing lab resources and support throughout this project.

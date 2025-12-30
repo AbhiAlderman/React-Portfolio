@@ -32,7 +32,6 @@ export const ProjectDetail = () => {
 
   return (
     <div className="min-h-screen">
-      <ThemeToggle />
       <NavBar />
 
       <article className="max-w-4xl mx-auto px-6 py-16">

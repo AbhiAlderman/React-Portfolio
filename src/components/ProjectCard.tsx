@@ -21,7 +21,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         "group relative cursor-pointer overflow-hidden rounded-xl",
         "bg-card border border-border shadow-md",
         // Hover effect: pop-up with accent border
-        "transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary",
+        "transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-accent",
         // Flex column layout
         "flex flex-col"
       )}
@@ -58,9 +58,9 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
               key={index}
               className={cn(
                 "px-3 py-1 rounded-full text-xs font-medium",
-                "bg-accent text-secondary-foreground",
+                "bg-primary text-primary-foreground",
                 "border border-border/50",
-                "transition-colors duration-200 group-hover:bg-secondary group-hover:border-secondary"
+                "transition-colors duration-200 group-hover:bg-accent group-hover:text-accent-foreground"
               )}
             >
               {tag}
@@ -70,7 +70,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
         {/* Title and Description */}
         <div className="flex-1 flex flex-col gap-2">
-          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-200">
+          <h3 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors duration-200">
             {project.title}
           </h3>
           <p className="text-sm text-foreground/70 line-clamp-3">

@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import { mdxComponents } from '../components/mdx/MDXComponents';
 import { NavBar } from '../components/NavBar';
-import { ThemeToggle } from '../components/ThemeToggle';
 
 export const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();

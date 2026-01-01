@@ -35,6 +35,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/AbhiAlderman/Platformer-Board-Game',
     demoUrl: 'https://toastyfraud.itch.io/platmorfer',
     date: 'July 2024',
+    institution: 'Personal Project',
   },
   {
     id: 'robot-block-stacker',
@@ -56,6 +57,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/AbhiAlderman/Bubble-Arcade-Game',
     demoUrl: 'https://toastyfraud.itch.io/bubble-bouncer',
     date: 'June 2024',
+    institution: 'Personal Project',
   },
   {
     id: 'benchmark-electronics-kuka-robot-arm',
@@ -64,6 +66,7 @@ export const projects: Project[] = [
     image: benchmarkKukaImg,
     tags: ['KUKA', 'Automation', 'Robotics'],
     date: 'Summer 2021',
+    institution: 'Benchmark Electronics',
   },
   {
     id: 'power-leap',
@@ -74,6 +77,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/dangjase/kenney-jam-2025',
     demoUrl: 'https://toastyfraud.itch.io/power-leap',
     date: 'July 2025',
+    institution: 'Personal Project',
   },
   {
     id: 'lights-camera-dungeon',
@@ -94,6 +98,7 @@ export const projects: Project[] = [
     tags: ['Javascript', 'HTML', 'CSS', 'React', 'Astro'],
     githubUrl: 'https://github.com/AbhiAlderman/Portfolio',
     date: '2023 - Present',
+    institution: 'Personal Project',
   },
   {
     id: 'automatic-secure-door',
@@ -103,6 +108,7 @@ export const projects: Project[] = [
     tags: ['Arduino', 'Automation'],
     githubUrl: 'https://github.com/AbhiAlderman/RFID_Access_Controller',
     date: 'December 2022',
+    institution: 'Berkeley Student Cooperative',
   },
   {
     id: 'discord-music-bot',
@@ -112,6 +118,7 @@ export const projects: Project[] = [
     tags: ['Python', 'AWS', 'Linux'],
     githubUrl: 'https://github.com/AbhiAlderman/Discord-Music-Bot',
     date: 'July 2022',
+    institution: 'Personal Project',
   },
   {
     id: 'ribbon-cutting-robot',
@@ -120,6 +127,7 @@ export const projects: Project[] = [
     image: ribbonRobotImg,
     tags: ['Java', 'Automation', 'Robotics'],
     date: '2019',
+    institution: 'Ygnacio Valley High School',
   },
   {
     id: 'first-robotics-competition',
@@ -129,5 +137,6 @@ export const projects: Project[] = [
     tags: ['Java', 'Vision', 'Automation', 'Robotics'],
     githubUrl: 'https://github.com/AbhiAlderman/Ygnacio-Valley-High-School-FRC-2018-Code',
     date: '2017-2020',
+    institution: 'Ygnacio Valley High School',
   },
 ];

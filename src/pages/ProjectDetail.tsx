@@ -37,24 +37,22 @@ export const ProjectDetail = () => {
       <article className="max-w-4xl mx-auto px-6 py-22">
         <header className="mb-12 text-center">
           <h1 className="text-5xl font-bold mb-4">{project.title}</h1>
-          {(project.date || project.institution) && (
-            <p className="text-sm text-foreground/60 mb-4">
-              {[project.date, project.institution].filter(Boolean).join(' • ')}
-            </p>
-          )}
           {project.tags && (
             <div className="flex flex-wrap gap-2 justify-center">
               {project.tags.map((tag: string) => (
-                <span key={tag} className="px-3 py-1 rounded-full text-xs font-medium bg-primary text-primary-foreground">
+                <span key={tag} className="px-3 py-1 rounded-full text-xs font-medium bg-primary text-primary-foreground mb-4">
                   {tag}
                 </span>
               ))}
             </div>
           )}
-        </header>
-
+          {(project.date || project.institution) && (
+            <p className="text-sm text-foreground/60 mb-2">
+              {[project.date, project.institution].filter(Boolean).join(' • ')}
+            </p>
+          )}
         {(project.demoUrl || project.githubUrl || project.slidesUrl || project.presentationUrl) && (
-          <div className="mb-8">
+          <div className="mb-2">
             <ProjectLinks
               demo={project.demoUrl}
               github={project.githubUrl}
@@ -62,6 +60,8 @@ export const ProjectDetail = () => {
             />
           </div>
         )}
+        </header>
+
 
         <MDXProvider components={mdxComponents}>
           <div className="prose-custom">

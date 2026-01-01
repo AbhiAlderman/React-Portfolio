@@ -22,6 +22,9 @@ export const projects: Project[] = [
     image: animatronicEyesImg,
     tags: ['ESP32', 'KiCAD', 'TinkerCAD', 'Robotics'],
     githubUrl: 'https://github.com/AbhiAlderman/Animatronic-Eyes',
+    date: 'Spring 2022',
+    institution: 'UC Berkeley',
+    slidesUrl: 'https://docs.google.com/presentation/d/1FW59XkIs3ZGVX3t927tC5mJX9hl6XicPWnYyxPDcV-w/edit',
   },
   {
     id: 'platmorfer',
@@ -31,6 +34,7 @@ export const projects: Project[] = [
     tags: ['GameDev', 'Godot', 'GDScript', 'Game Jam'],
     githubUrl: 'https://github.com/AbhiAlderman/Platformer-Board-Game',
     demoUrl: 'https://toastyfraud.itch.io/platmorfer',
+    date: 'July 2024',
   },
   {
     id: 'robot-block-stacker',
@@ -39,6 +43,9 @@ export const projects: Project[] = [
     image: berkeleyArmImg,
     tags: ['ROS', 'Python', 'Vision', 'Robotics'],
     githubUrl: 'https://github.com/AbhiAlderman/106a_Project',
+    date: 'December 2023',
+    institution: 'UC Berkeley',
+    slidesUrl: 'https://docs.google.com/presentation/d/1WTsfqbbt7CjBxMZEsQlyO-3TQf2Ovqs2yy4cxfOyZC0/',
   },
   {
     id: 'bubble-bouncer',
@@ -48,6 +55,7 @@ export const projects: Project[] = [
     tags: ['GameDev', 'Godot', 'GDScript', 'Game Jam'],
     githubUrl: 'https://github.com/AbhiAlderman/Bubble-Arcade-Game',
     demoUrl: 'https://toastyfraud.itch.io/bubble-bouncer',
+    date: 'June 2024',
   },
   {
     id: 'benchmark-electronics-kuka-robot-arm',
@@ -55,15 +63,17 @@ export const projects: Project[] = [
     description: 'KUKA Robotic Arm that autonomously switches tools, picks up brushes, deburrs product surfaces and holes, and picks / racks products.',
     image: benchmarkKukaImg,
     tags: ['KUKA', 'Automation', 'Robotics'],
+    date: 'Summer 2021',
   },
   {
     id: 'power-leap',
     title: 'Power Leap',
-    description: 'Game Jam submission for the Kenny Game Jam. Leap to the top!',
+    description: 'Game Jam submission for the Kenny Game Jam. Heavily inspired by Jump King. Leap to the top!',
     image: powerLeapImg,
     tags: ['GameDev', 'Godot', 'GDScript', 'Game Jam'],
     githubUrl: 'https://github.com/dangjase/kenney-jam-2025',
     demoUrl: 'https://toastyfraud.itch.io/power-leap',
+    date: 'July 2025',
   },
   {
     id: 'lights-camera-dungeon',
@@ -73,6 +83,8 @@ export const projects: Project[] = [
     tags: ['Graphics', 'Godot', 'GameDev', 'GDScript'],
     githubUrl: 'https://github.com/draynr/Lights_Camera_Dungeon',
     demoUrl: 'https://toastyfraud.itch.io/lights-camera-dungeon',
+    date: 'April 2024',
+    institution: 'UC Berkeley',
   },
   {
     id: 'personal-portfolio',
@@ -81,6 +93,7 @@ export const projects: Project[] = [
     image: portfolioImg,
     tags: ['Javascript', 'HTML', 'CSS', 'React', 'Astro'],
     githubUrl: 'https://github.com/AbhiAlderman/Portfolio',
+    date: '2023 - Present',
   },
   {
     id: 'automatic-secure-door',
@@ -89,6 +102,7 @@ export const projects: Project[] = [
     image: cloyneDoorImg,
     tags: ['Arduino', 'Automation'],
     githubUrl: 'https://github.com/AbhiAlderman/RFID_Access_Controller',
+    date: 'December 2022',
   },
   {
     id: 'discord-music-bot',
@@ -97,6 +111,7 @@ export const projects: Project[] = [
     image: discordBotImg,
     tags: ['Python', 'AWS', 'Linux'],
     githubUrl: 'https://github.com/AbhiAlderman/Discord-Music-Bot',
+    date: 'July 2022',
   },
   {
     id: 'ribbon-cutting-robot',
@@ -104,6 +119,7 @@ export const projects: Project[] = [
     description: 'Small four-wheeled robot used to cut the ribbon for the Bay Area Science Festival in 2019.',
     image: ribbonRobotImg,
     tags: ['Java', 'Automation', 'Robotics'],
+    date: '2019',
   },
   {
     id: 'first-robotics-competition',
@@ -112,5 +128,6 @@ export const projects: Project[] = [
     image: frcImg,
     tags: ['Java', 'Vision', 'Automation', 'Robotics'],
     githubUrl: 'https://github.com/AbhiAlderman/Ygnacio-Valley-High-School-FRC-2018-Code',
+    date: '2017-2020',
   },
 ];

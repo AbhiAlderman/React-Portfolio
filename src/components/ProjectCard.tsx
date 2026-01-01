@@ -76,6 +76,11 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           <p className="text-sm text-foreground/70 line-clamp-3">
             {project.description}
           </p>
+          {(project.date || project.institution) && (
+            <p className="text-xs text-foreground/60">
+              {[project.date, project.institution].filter(Boolean).join(' • ')}
+            </p>
+          )}
         </div>
       </div>
     </article>

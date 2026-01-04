@@ -8,6 +8,7 @@ export interface Project {
   effectiveDate: string ;         // Standard date for sorting (e.g., "2023-05-15")
   detailedDescription?: string;  // Optional: Full writeup for detail page
   demoUrl?: string;              // Optional: Live demo link
+  demoButtonText?: string;       // Optional: Custom text for demo button (e.g., "Play Demo", "View Demo")
   githubUrl?: string;            // Optional: GitHub repository
   videoUrl?: string;             // Optional: Demo video
   institution?: string;          // Optional: Institution (e.g., "UC Berkeley")

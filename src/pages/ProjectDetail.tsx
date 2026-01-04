@@ -55,6 +55,7 @@ export const ProjectDetail = () => {
           <div className="mb-2">
             <ProjectLinks
               demo={project.demoUrl}
+              demoButtonText={project.demoButtonText}
               github={project.githubUrl}
               slides={project.slidesUrl || project.presentationUrl}
             />

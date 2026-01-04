@@ -2,12 +2,13 @@ import { ExternalLink, Github, Presentation } from 'lucide-react';
 
 interface ProjectLinksProps {
   demo?: string;
+  demoButtonText?: string;
   github?: string;
   slides?: string;
   presentation?: string;
 }
 
-export const ProjectLinks = ({ demo, github, slides, presentation }: ProjectLinksProps) => (
+export const ProjectLinks = ({ demo, demoButtonText = 'View Demo', github, slides, presentation }: ProjectLinksProps) => (
   <div className="flex flex-wrap gap-4 justify-center my-8">
     {demo && (
       <a
@@ -17,7 +18,7 @@ export const ProjectLinks = ({ demo, github, slides, presentation }: ProjectLink
         rel="noopener noreferrer"
       >
         <ExternalLink size={18} />
-        View Demo
+        {demoButtonText}
       </a>
     )}
     {github && (

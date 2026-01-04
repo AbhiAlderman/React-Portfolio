@@ -3,37 +3,88 @@ import { ProjectTLDR } from '../../components/mdx/ProjectTLDR';
 import { ProjectDivider } from '../../components/mdx/ProjectDivider';
 
 import heroImg from '../../assets/Visuals/Power-Leap/thumbnail.png';
-import demoGif1 from '../../assets/Visuals/Power-Leap/demo_gif_1.gif';
-import demoGif2 from '../../assets/Visuals/Power-Leap/demo_gif_2.gif';
-import demoGif3 from '../../assets/Visuals/Power-Leap/demo_gif_3.gif';
-import thumbnail2 from '../../assets/Visuals/Power-Leap/thumbnail_2.png';
+import faceSprites1 from '../../assets/Visuals/Power-Leap/face_sprites_1.png';
+import faceSprites2 from '../../assets/Visuals/Power-Leap/face_sprites_2.png';
+import handSprites from '../../assets/Visuals/Power-Leap/hand_sprites.png';
+import animationDemo from '../../assets/Visuals/Power-Leap/animation_demo.gif';
+import jumpkingDemo from '../../assets/Visuals/Power-Leap/jumpking_demo.gif';
+import jumpkingFall from '../../assets/Visuals/Power-Leap/jumpking-fall.gif';
+import jumpkingCopy1 from '../../assets/Visuals/Power-Leap/jumpking_copy_1.gif';
+import jumpkingCopy2 from '../../assets/Visuals/Power-Leap/jumpking_copy_2.gif';
+import longFall from '../../assets/Visuals/Power-Leap/long_fall.gif';
+import almostFlawless from '../../assets/Visuals/Power-Leap/almost_flawless.gif';
 
 <ProjectImage src={heroImg} alt="Power Leap game thumbnail" maxWidth="full" />
 
 <ProjectTLDR>
-Game Jam submission for the Kenny Game Jam. Leap to the top!
+Game Jam submission for the Kenny Game Jam 2025. Leap to the top!
 </ProjectTLDR>
 
 <ProjectDivider />
 
 ## Overview
 
-This game was a submission to the Kenny Gam Jam 2025. We were required to use assets made by Kenny, a game asset developer and somewhat famous niche internet personality? Inspired by Jump King, in this game you leap to the top of the level while avoiding a long tumble to the bottom. Try the game on [itch.io](https://toastyfraud.itch.io/power-leap).
+This game was a submission to the [Kenny Game Jam 2025](https://itch.io/jam/kenney-jam-2025). We were required to use assets made by Kenny, a game asset developer and somewhat famous niche internet personality? Inspired by Jump King, in this game you leap to the top of the level while avoiding a long tumble to the bottom. Try the game on [itch.io](https://toastyfraud.itch.io/power-leap)!
 
 <ProjectDivider />
 
-## UNDER CONSTRUCTION
+## Kenny Jam 2025
 
-More details coming soon!
+Who is Kenny? Honestly, I'm not really sure. I think this is an individual, but at this point they probably have a team. Either way, Kenny has been creating public domain game assets for over 10 years! It's very impressive. Whenever I'm looking for assets to use for a game, Kenny assets always pop up. You can view them on the [Kenny.nl](https://kenney.nl/) page.
 
-<ProjectDivider />
+When I saw that there was a Kenny Jam in 2025, I was pretty stoked! The gimmick with Kenny jams is that you can **only** use assets made by Kenny. For a programmer, this is pretty great. I actually enjoy making art here and there, but it's definitely a tedious process that eats away at precious dev time. That's time I just don't have during a game jam. So if I can just use these premade assets, then I can just focus on development!
 
-## Visuals
+## The Theme
 
-<ProjectImage src={demoGif1} alt="Power Leap gameplay demo 1" maxWidth="medium" />
+The theme for this jam was Power. This is pretty vague and can be interpreted in many different ways. My biggest criteria for this game jam is that I really, **really** did not want to make another platformer. The last 2 game jams I had participated in had both been platformers.
 
-<ProjectImage src={demoGif2} alt="Power Leap gameplay demo 2" maxWidth="medium" />
+…But as I'm sure you noticed from the visuals, a platformer is exactly what I ended up making. I worked on this project with 2 other friends, and this was their first time doing a game jam. We decided to stick to something simple so that we could all contribute. Ack! The next time I do a game jam, I refuse to make a platformer no matter what!
 
-<ProjectImage src={demoGif3} alt="Power Leap gameplay demo 3" maxWidth="medium" />
+To address the theme, we decided to make a platformer where you "power up" your jump. Very lazy, I know. We just wanted to make **Jump King** really. More on that later. The flow of ideas was very slow for this jam!
+## Animations
 
-<ProjectImage src={thumbnail2} alt="Power Leap thumbnail 2" maxWidth="medium" />
+We were limited in our options for animating directly since we were using Kenny assets and had picked an asset pack of simple 2D images. This limit actually ended up being a positive, since it forced me to really use [Tweens](https://docs.godotengine.org/en/stable/classes/class_tween.html) and see just how powerful they can be. Tweens allow us to animate by specifying keyframes and interloping through different values between these keyframes. In our case, we used tweening to move the face, move the hands, and for filling up the power bar. With just different images and tweens between these images, we were actually able to get fairly decent animations that I can proudly say I'm happy with.
+
+We used some simple shapes, hands, and faces from this [Shape Characters Kenny Asset](https://kenney.nl/assets/shape-characters). I edited a couple of these to have the character look different directions.
+
+<ProjectImage src={faceSprites1} alt="Face sprites looking in different directions" caption="basic face looking in different directions." maxWidth="medium" />
+
+<ProjectImage src={faceSprites2} alt="Determined face sprites" caption="different faces we swap to when charging to show the character becoming more 'determined'" maxWidth="medium" />
+
+<ProjectImage src={handSprites} alt="Hand sprites" caption="hand sprites we used" maxWidth="medium" />
+
+By combining these different images with the tweening mentioned before, the character looks in the direction you are trying to jump, makes a more focused face the longer you charge the jump, and slams the ground with its hands to "jump" once released.
+
+<ProjectImage src={animationDemo} alt="Animation demo" caption="demo of animations using tweening and different images for our character" maxWidth="medium" />
+
+Also, we threw in a shader to make the character get more red as the jump gets more charged up.
+
+## The Game
+
+Our game is basically just [Jump King](https://www.jump-king.com/). That's it, that can be the entire writeup. I'm a pretty big fan of Jump King, I think it's really well made and polished for being such a simple concept. And of course, with all the popularity it's gotten, it's a tried and true gameplay loop. You jump to the top of the level with a series of charged jumps.
+
+<ProjectImage src={jumpkingDemo} alt="Jump King gameplay demo" caption="demo of Jump King" maxWidth="medium" />
+
+The catch is that there is no dying, only falling. The way the level is designed, a fall can cause you to bounce down very, very, very far. This undoes all the progress you made. And there are no checkpoints. So you go through a tedious process of repeating the same jumps over and over, praying you don't fall to the bottom. This game basically pioneered the rage platformer / "foddian" genre.
+
+<ProjectImage src={jumpkingFall} alt="Falling in Jump King" caption="falling very, very far in Jump King" maxWidth="medium" />
+
+So we decided to use this as inspiration for our gameplay loop and basically just make a fan tribute game. In fact, our game might be a little **too** similar to Jump King…
+
+<ProjectImage src={jumpkingCopy1} alt="Jump King level segment" caption="here's a segment of jump king…" maxWidth="medium" />
+
+<ProjectImage src={jumpkingCopy2} alt="Power Leap level segment" caption="and here is a **very** familiar segment in our game…" maxWidth="medium" />
+
+The game feel, timing, and level design was very very much inspired by Jump King. We basically used Jump King as a testing ground to make sure our game "felt right". We were super short on time when we really got started on development, so we did not have time to reinvent the wheel. Why try to figure out what makes a jump feel good ourselves when Jump King already did it?
+
+Level design is the real meat and bones for these types of games. Of course, in classic game jam fashion, we finalized our base mechanics with barely half a day remaining. Not whole lot of time for level design and iteration. That's why we copied some of the level design from Jump King. It's actually quite hard to design a level in such a way that a missed jump at the top results in a domino effect of bounces that leads you to the bottom. To solve this, we copied some of the "architecture" of jump king, with the shape of the slopes and how they lead into one another. This worked fairly well, and you can fall quite far if you miss the last jump of our game.
+
+<ProjectImage src={longFall} alt="Long fall in Power Leap" caption="taking a long fall in our game" maxWidth="medium" />
+
+## Conclusion
+
+Thanks for reading! This was a fun little game jam, and I'm actually quite happy with what we made. Yes, it's basically just Jump King. But it's actually quite challenging, and feels rewarding when you beat it. Of course, one of the big challenges with Jump King is that you cannot SEE the amount of "charge" you have before jumping, which our game does. So if you wanted to mathematically beat this game, you could document the exact charge needed for each jump so that you never fail it again...
+
+Anyways, here's a gif of me breezing through the whole level in one go, only to miss the very last jump… damn!
+
+<ProjectImage src={almostFlawless} alt="Almost flawless run" caption="almost beat the game with no mistakes!" maxWidth="medium" />

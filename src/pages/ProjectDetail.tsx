@@ -46,9 +46,9 @@ export const ProjectDetail = () => {
               ))}
             </div>
           )}
-          {(project.date || project.institution) && (
+          {(project.displayDate || project.institution) && (
             <p className="text-sm text-foreground/60 mb-2">
-              {[project.date, project.institution].filter(Boolean).join(' • ')}
+              {[project.displayDate, project.institution].filter(Boolean).join(' • ')}
             </p>
           )}
         {(project.demoUrl || project.githubUrl || project.slidesUrl || project.presentationUrl) && (
